@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textViewexistinguser"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".CartLabActivity">
+
+    <TextView
+        android:id="@+id/titledoctorDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="@string/tit"
+        android:textColor="#BC45DB"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/articletitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="2dp"
+        android:text="Deliver Location: Dehradun"
+        android:textColor="#F3F2F2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/articledetail"
+        app:layout_constraintEnd_toEndOf="@+id/titledoctorDetail"
+        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titledoctorDetail"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/medicinecarttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Lab Test and Packages"
+        android:textColor="#F3D245"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/articledetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="@+id/articletitle"
+        app:layout_constraintTop_toBottomOf="@+id/articletitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ListView
+        android:id="@+id/articledetail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="103dp"
+        app:layout_constraintBottom_toBottomOf="@+id/datetext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titledoctorDetail">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/backarticle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toEndOf="@+id/checkoutmedicine"
+        app:layout_constraintTop_toBottomOf="@+id/buttontime"
+        app:layout_constraintVertical_bias="1.0">
+
+    </Button>
+
+    <Button
+        android:id="@+id/checkoutmedicine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="16dp"
+        android:text="CHECKOUT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttondate"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/buttondate"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="21/10/2002"
+        android:textColor="#FAF5F5"
+        app:layout_constraintBottom_toBottomOf="@+id/buttontime"
+        app:layout_constraintEnd_toEndOf="@+id/checkoutmedicine"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttontime"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttontime"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="100dp"
+        android:text="10:30"
+        android:textColor="#F1ECEC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toEndOf="@+id/buttondate" />
+
+    <TextView
+        android:id="@+id/datetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="16dp"
+        android:text="Select Date"
+        android:textColor="#F6E07D"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttondate"
+        app:layout_constraintEnd_toStartOf="@+id/timetextt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttondate" />
+
+    <TextView
+        android:id="@+id/timetextt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:text="Select Time"
+        android:textColor="#E1CC72"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttontime"
+        app:layout_constraintEnd_toEndOf="@+id/buttontime"
+        app:layout_constraintStart_toStartOf="@+id/buttontime"
+        app:layout_constraintTop_toTopOf="@+id/datetext" />
+
+    <TextView
+        android:id="@+id/totalmedcost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Cost: 1200/-"
+        android:textColor="#F1D764"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/articledetail"
+        app:layout_constraintVertical_bias="0.08" />
+</androidx.constraintlayout.widget.ConstraintLayout>
